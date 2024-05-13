@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,14 +21,22 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 30vw;
+}
+
+input {
+    border: 1px solid black ;
+    margin-bottom: 1rem;
+}
+
+.fc {
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
 }
 
 @layer utilities {

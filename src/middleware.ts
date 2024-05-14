@@ -1,11 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request : NextRequest) {
-    if (!(localStorage.getItem("country"))) {
-        const country = request.geo?.country;
-        if (country) {
-            localStorage.setItem("country", country);
-        }
+    const country = request.geo?.country;
+    if (country) {
+        localStorage.setItem("country", country);
     }
 
     return NextResponse.next();

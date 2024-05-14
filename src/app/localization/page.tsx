@@ -1,10 +1,10 @@
-import { NextRequest } from "next/server";
+export default async function Localization () {
 
-export default function Localization (request: NextRequest) {
-
-    const country = request.geo?.country;
+    const country = await fetch("/api/", {
+        method: "GET",
+    })
 
     return (
-        <h1>Olá {country}</h1>
+        <h1>Olá</h1>
     )
 }

@@ -6,7 +6,7 @@ export async function GET(request: NextRequest) {
 
     const country = request.headers.get("x-vercel-ip-country")
     
-    return new Response(JSON.stringify({country: country, nome: "Jomar"}), {
+    return new Response(JSON.stringify({country: country, nome: "Diego"}), {
         headers: {
             "Content-Type" : "application/json"
         }

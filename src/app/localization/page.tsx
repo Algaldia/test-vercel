@@ -15,13 +15,12 @@ export default async function Localization(){
     .then((response) => console.log(response.json()))
  */
     const data = await getData();
-    console.log(data)
 
     return(
         <>
             <h1>hi</h1>
-{/*                 <p>{data.country}</p>
-                <p>{data.nome}</p> */}
+            <p>{data.country}</p>
+            <p>{data.nome}</p>
         </>
     )
 

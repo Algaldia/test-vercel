@@ -1,6 +1,9 @@
+const devPath = 'http://localhost:3000/localization/api';
+const vercelPath = 'https://test-vercel-eight-indol.vercel.app/localization/api'
+
 async function getData() {
     "use server"
-    const response = await fetch('http://localhost:3000/localization/api', {
+    const response = await fetch(vercelPath, {
         method: "GET"
     });
     return response.json();

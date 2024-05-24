@@ -5,11 +5,15 @@ import { retreavingData } from '../../lib/spreadSheets'
 
 export default function Enviroment(){
     const [user, setUser] = useState([{
-        name: "",
-        age: ""
+        id: "",
+        english: "",
+        portuguese: "",
+        spanish: ""
     },{
-        name: "",
-        age: ""
+        id: "",
+        english: "",
+        portuguese: "",
+        spanish: ""
     }])
     useEffect(() => {
         async function extractData() {
@@ -20,8 +24,8 @@ export default function Enviroment(){
     }, [])
     return(
         <>
-            <h1>Hello! {user[0].name}, you have {user[0].age} years</h1>
-            <h1>Hello! {user[1].name}, you have {user[1].age} years</h1>
+            <h1>Hello! {user[0].id}, you have {user[0].english} years</h1>
+            <h1>Hello! {user[1].id}, you have {user[1].english} years</h1>
         </>
     );
 }
